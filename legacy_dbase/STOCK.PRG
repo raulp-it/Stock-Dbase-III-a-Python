@@ -51,7 +51,7 @@ DO WHILE .T.
         CASE OP = 3
             DO SMODIF
         CASE OP = 4
-            DO SREPONER
+            DO REPONER
         CASE OP = 5
             DO LIS_PRE
         CASE OP = 6
@@ -69,4 +69,5 @@ DO WHILE .T.
     ENDCASE
 ENDDO
 CLEAR ALL
+SET STATUS ON
 RETURN
