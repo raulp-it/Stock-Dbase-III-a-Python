@@ -1,5 +1,6 @@
 from presenta import presentacion
 from funciones import limpiar_pantalla, aguardar, obtener_tamano_terminal, centrar_texto, say
+from head import encabezado
 ''' from acerca import menu_acerca
 from altas import menu_altas
 from bajas import menu_bajas
@@ -14,26 +15,24 @@ presentacion()
 aguardar()
 limpiar_pantalla()
 
+
 ancho, alto = obtener_tamano_terminal()
-separador = "=" 
-titulo = "SISTEMA GENERAL DE STOCK v2.0"
-titulo_centrado = centrar_texto(titulo, ancho)
+separador = "="
 menu_principal_centrado = centrar_texto("** Menu Principal **", ancho)
 def menu_principal():
-    while True:
+    while True:        
+        encabezado()
         print(separador*ancho)
-        print(titulo_centrado)
-        print(separador*ancho)
-        print("\n" + menu_principal_centrado)
-        say(8, 5, "[1] Alta de Stock")
-        say(10, 5, "[2] Baja de Stock")
-        say(12, 5, "[3] Modificar Stock")
-        say(14, 5, "[4] Reponer Stock")
-        say(8, 40, "[5] Lista de Precios")
-        say(10, 40, "[6] Lista de Pedidos")
-        say(12, 40, "[7] Consultas de Stock")
-        say(14, 40, "[8] Retiro de Mercaderia")
-        say(16, 28, "[9] Salir del Programa")
+        print("\n" + menu_principal_centrado)        
+        say(9, 5, "[1] Alta de Stock")
+        say(11, 5, "[2] Baja de Stock")
+        say(13, 5, "[3] Modificar Stock")
+        say(15, 5, "[4] Reponer Stock")
+        say(9, 40, "[5] Lista de Precios")
+        say(11, 40, "[6] Lista de Pedidos")
+        say(13, 40, "[7] Consultas de Stock")
+        say(15, 40, "[8] Retiro de Mercaderia")
+        say(17, 28, "[9] Salir del Programa")
         opcion = input("\n\nSelecciona una opción: ")
         if opcion == '1':
             # Alta de Contactos
